@@ -1,0 +1,97 @@
+## My plan:
+
+Stage 1 – Strengthen Fundamentals
+
+CIFAR-10 image classification from scratch
+Build a small CNN to classify tiny natural images. You’ll learn data augmentation, regularization, and deeper conv nets.
+
+Word2Vec (Skip-Gram and CBOW) from scratch
+Learn embeddings, negative sampling, and training efficiency.
+
+Autoencoder for MNIST or Fashion-MNIST
+Introduces representation learning and reconstruction objectives.
+
+Stage 2 – Expand to More Modalities
+
+Recurrent Neural Networks (RNN / LSTM) from scratch
+Train on text generation or character-level language modeling (e.g., Shakespeare text).
+
+Seq2Seq model with attention
+Try a toy English-to-Pig Latin translation dataset or number-to-words dataset.
+
+Convolutional Variational Autoencoder (VAE)
+Learn generative modeling for images.
+
+Stage 3 – Modern Architectures and Challenges
+
+ResNet from scratch (on CIFAR-10 or CIFAR-100)
+Teaches residual connections and training deeper networks.
+
+GANs (Generative Adversarial Networks) from scratch
+Start with vanilla GAN on MNIST, then DCGAN for CIFAR-10.
+
+BERT-style masked language model (mini-BERT)
+Train on a small text corpus with masked token prediction.
+
+Stage 4 – Multi-Task and Advanced Projects
+
+Image Captioning model
+Combine CNN (image encoder) + RNN/Transformer (text decoder).
+
+Speech recognition (tiny dataset)
+Build a model to convert simple audio (spoken digits dataset) into text.
+
+Reinforcement Learning: DQN from scratch
+Train an agent to play CartPole.
+
+Stage 5 – Research-Style Projects
+
+Diffusion Models from scratch (start small, e.g., 2D toy datasets then images).
+
+Instruction-tuned transformer
+Fine-tune a small transformer model on instruction-following datasets.
+
+Multi-modal model
+Train a CLIP-style model from scratch on images + text (even on a small dataset).
+
+Stage 6 - GPT and NLP
+Step 1:
+Tiny GPT (tiny Shakespeare or small wikipedia subset)
+Learn:
+Tokenization (BPE or sentencepiece)
+Positional encodings
+Training stability (layer norm, initialization)
+Goal: Get a working GPT-mini that generates Shakespeare-style text.
+
+Step 2: GPT small
+Dataset: WikiText-2 or OpenWebText-10k subset (~100 MB).
+Training: single GPU with gradient checkpointing + mixed precision.
+Learn:
+Scaling laws basics (train loss vs model size vs dataset size)
+Optimizer tricks (AdamW, cosine LR decay, warmup)
+Data efficiency
+Goal: A small model that can generate coherent paragraphs.
+
+Step 3: Retrieval-Augmented Generation (RAG)
+Add a retriever (FAISS or simple embedding lookup).
+Use your GPT-small as the generator conditioned on retrieved docs.
+Learn:
+Knowledge grounding
+Combining symbolic search with neural generation
+System-level thinking beyond the model
+Goal: A GPT-small that can “answer questions” about a dataset it wasn’t directly trained on.
+
+Step 4 – Multi-Modal Mini GPT
+Add image or audio embeddings as extra input tokens.
+Example: image captioning with transformer decoder.
+Learn:
+Cross-modal embeddings
+How GPT-like models extend to other data types
+Goal: Small but working “multi-modal GPT” prototype.
+
+Step 5 - Research Prototyping
+At this point I'll be close to research-land. Some realistic directions:
+LoRA / adapters for efficient fine-tuning.
+Sparse attention (Longformer, FlashAttention).
+Tiny diffusion + GPT hybrid models.
+Exploring efficiency (distillation, pruning, quantization).
